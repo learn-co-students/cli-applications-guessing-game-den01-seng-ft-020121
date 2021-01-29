@@ -14,13 +14,13 @@ end
 def run_guessing_game
   num = computer_number
   prompt_user
-  get_user_input
-  case get_user_input
-    when get_user_input == num
-      puts "You guessed the correct number!"
-    when get_user_input != num
-      puts "Sorry! The computer guessed #{random_num}"
-    when input == "exit"
-      puts "Goodbye!"
+  user_num = get_user_input
+  case num
+  when user_num.to_i == num
+    p "You guessed the correct number!"
+  when exit 
+    p "Goodbye"
+  else
+    p "Sorry! The computer guessed #{num}"
   end
 end  
